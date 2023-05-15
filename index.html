@@ -4,30 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- my_css -->
+    <link rel="stylesheet" href="css/style.css">
+
     <title>Biglietto_treno</title>
 </head>
 <body>
-    <h1>Biglietto Treno</h1>
+    <div class="container">
 
-    <div class="age">
-    <p>Quanti anni hai? </p>
-        <input type="text" id="input_age">
+        <h1>Biglietto Treno</h1>
+        <table>
+            <tr>
+        <tr>
+            <td>Nome:</td>
+                <td><input type="text" id="input_Name" ></td>
+            </tr>
+            <tr>
+                <Td>Cognome:</Td>
+                <td><input type="text"  id="input_Surname"></td>
+            </tr>
+            <tr>
+                <tr>
+                    <td>Età:</td>
+                <td><input type="number"  id="input_age"></td>
+            </tr> 
+            
+            <Td>Quanti kilometri vuoi fare?</Td>
+            <Td><input type="number" id="input_km"></Td>
+        </tr>
+        <tr>
+            <td>Metodo di pagamento &RightArrow;</td>
+        <td> 
+            <input type="radio" value="Carta di credito">Carta di credito
+            <input type="radio" value="Contanti">Contanti
+        </td>
+        <tr>
+        </table>
+
+        <div>
+            <p>&downarrow; Premi qui per calcolare &downarrow;</p>
+            <button class="button">
+                calcola!
+            </button>
+        </div>   
+        <h3>Riepilogo Biglieto:</h3>
+        <pre id="TickeName">
+        </pre>
+        <pre id="TicketSurname">
+        </pre>
+        <pre id="TicketAge"></pre>
+        <pre id="TicketKm">
+        </pre>
+        <pre id="DiscountPrice"></pre>
+        <pre id="FinalTicket"></pre>
     </div>
-
-    
-    <div class="km">
-        <p>Quanti km vuoi fare?</p>
-        <input type="text" id="input_km" value="">
-    </div>
-
-    <div>
-        <p>&downarrow; Premi qui per calcolare &downarrow;</p>
-        <button class="button">
-            calcola!
-        </button>
-    </div>
-
-
+        
 
 
 
@@ -41,20 +73,3 @@
 </html>
 
 
-
-
-<!-- 
-Descrizione:
-Scrivere un programma che chieda all’utente:
-Il numero di chilometri da percorrere!
-Età del passeggero Sulla base di queste informazioni dovrà calcolare il prezzo totale del biglietto di viaggio, secondo le seguenti regole:!
-il prezzo del biglietto è definito in base ai km (0.233 € al km)!
-va applicato uno sconto del 19.4% per i minorenni!
-va applicato uno sconto del 37.7% per gli over 65.!
-MILESTONE 1:
-Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente due input e un bottone (non stilizzati), realizziamo le specifiche scritte sopra.
-La risposta finale (o output) sarà anch’essa da scrivere in console.
-MILESTONE 2:
-Solo una volta che il milestone 1 sarà completo e funzionante allora realizzeremo un form in pagina in cui l’utente potrà inserire i dati e visualizzare il calcolo finale con il prezzo.
-Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagina (il prezzo dovrà essere formattato con massimo due decimali, per indicare i centesimi sul prezzo).
--->
